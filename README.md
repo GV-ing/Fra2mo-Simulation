@@ -151,24 +151,6 @@ ros2 launch fra2mo_navigation amcl.launch.py
 
 ---
 
-## Submodules
-
-The packages inside `src/` are managed as Git submodules:
-
-- `src/fra2mo_description`
-- `src/fra2mo_navigation`
-
-This design choice is practical, as it allows us to modify individual packages more easily and recall them for other projects if necessary.
-If you clone the repository from scratch, initialize them with:
-
-```bash
-git submodule update --init --recursive
-```
-
-If the submodule pointers are updated in this repository, make sure to pull the latest changes and refresh them locally.
-
----
-
 ## Quick Start
 
 Connect the joystick then, to prepare and launch the environment for the first time:
