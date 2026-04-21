@@ -39,21 +39,7 @@ Containerization is a technical choice, not just a convenience feature. It provi
 2. **Faster setup**: environment provisioning takes minutes instead of manually reproducing a full robotics stack.
 3. **Portability**: software developed in simulation can be transferred more reliably to the onboard computer used on the real robot.
 
-## Quick Start
 
-To prepare and launch the environment for the first time:
-
-```bash
-chmod +x docker_scripts/*.sh
-./docker_scripts/docker_build_image.sh
-./docker_scripts/docker_run_container.sh
-```
-
-Once the container is running, you can attach additional shells with:
-
-```bash
-./docker_scripts/docker_connect.sh
-```
 
 ## ROS 2 Packages in `src`
 
@@ -128,13 +114,25 @@ git submodule update --init --recursive
 
 If the submodule pointers are updated in this repository, make sure to pull the latest changes and refresh them locally.
 
-## Build Notes
-
-Whenever changes are made to packages, you need to run,inside the container, the following commands:
-
+# Quick Start
+Connect the joystick then, to prepare and launch the environment for the first time:
 
 ```bash
-colcon build
-source install/setup.bash
+chmod +x docker_scripts/*.sh
+./docker_scripts/docker_build_image.sh
+./docker_scripts/docker_run_container.sh
 ```
 
+Once the container is running, you can attach additional shells with:
+
+```bash
+./docker_scripts/docker_connect.sh
+```
+Inside the container, start RViz and Gazebo:
+
+```bash
+ros2 launch fra2mo_description fra2mo_rviz.launch.py
+ros2 launch fra2mo_description fra2mo_gazebo.launch.py
+```
+Now you can move fra2mo inside the simulation environment and use SLAM and AMCL features as described above.
+If the commands do not work, check the /joy topic to understand which axes the joystick is using.
