@@ -2,10 +2,7 @@
 
 > 🤖 Simulation workspace for **fra2mo**, a differential-drive mobile robot in ROS 2 Humble.
 
----
-
-## 📚 Quick Index
-
+\n---
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
 - [Docker Environment](#docker-environment)
@@ -151,7 +148,10 @@ ros2 launch fra2mo_navigation amcl.launch.py
 
 ---
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d7206b6108b2f7441a653668b3609d3d1b5fbc45
 ## Quick Start
 
 Connect the joystick then, to prepare and launch the environment for the first time:
