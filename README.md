@@ -8,7 +8,6 @@
 - [Repository Structure](#repository-structure)
 - [Docker Environment](#docker-environment)
 - [ROS 2 Packages in `src`](#ros-2-packages-in-src)
-- [Submodules](#submodules)
 - [Quick Start](#quick-start)
 
 ---
